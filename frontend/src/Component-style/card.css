@@ -1,0 +1,30 @@
+.card{
+    font-family: 'Josefin Sans', sans-serif;
+    height: 200px;
+    width: 170px;
+    border: 4px solid red;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.407);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 40px;
+}
+
+.card img{
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+}
+
+.card h2{
+    margin: 0;
+    padding: 0;
+}
+
+.card p{
+    word-wrap: break-word;
+    font-size: 15px;
+    font-weight: 900;
+}
