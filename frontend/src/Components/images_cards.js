@@ -1,33 +1,33 @@
 const img_blocks = [
   {
     key: 1,
-    Image: "https://picsum.photos/70",
-    heading: "Merge Image1",
-    content: "You can easily do all this using map",
+    Image: "Images/image_crop.png",
+    heading: "Crop Image",
+    content: "Crop your images easily with our tool",
   },
   {
     key: 2,
-    Image: "https://picsum.photos/70",
-    heading: "Merge Image2",
-    content: "You can easily do all this using map",
+    Image: "Images/image_filter.png",
+    heading: "Aesthetic filters",
+    content: "Apply aesthetic filters on your photos",
   },
   {
     key: 3,
-    Image: "https://picsum.photos/70",
-    heading: "Merge Image3",
-    content: "You can easily do all this using map",
+    Image: "Images/image_edit.png",
+    heading: "Edit image",
+    content: "Edit your precious image with our tool",
   },
   {
     key: 4,
-    Image: "https://picsum.photos/70",
-    heading: "Merge Image4",
-    content: "You can easily do all this using map",
+    Image: "Images/image_meme.png",
+    heading: "Meme generator",
+    content: "Generate funny memes using our template",
   },
   {
     key: 5,
-    Image: "https://picsum.photos/70",
-    heading: "Merge Image5",
-    content: "You can easily do all this using map",
+    Image: "Images/image_compress.png",
+    heading: "Compress Image",
+    content: "One click compress tool",
   },
 ];
 
