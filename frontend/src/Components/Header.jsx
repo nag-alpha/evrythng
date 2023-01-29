@@ -14,10 +14,10 @@ const Header = () => {
         <div className="navigation">
           <ul>
             <li>
-              <NavLink to="/">Edit PDF</NavLink>
+              <NavLink to="/pdf">Edit PDF</NavLink>
             </li>
             <li>
-              <NavLink to="/image">Edit Image</NavLink>
+              <NavLink to="/">Edit Image</NavLink>
             </li>
           </ul>
         </div>

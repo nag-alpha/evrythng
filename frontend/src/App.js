@@ -11,8 +11,8 @@ const App = () => {
     <Router>
       <Header />
       <Routes>
-        <Route exact path="/" element={<PDF />} />
-        <Route exact path="/image" element={<Image />} />
+        <Route exact path="/" element={<Image />} />
+        <Route exact path="/pdf" element={<PDF />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />

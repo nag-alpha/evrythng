@@ -29,6 +29,12 @@ const img_blocks = [
     heading: "Compress Image",
     content: "One click compress tool",
   },
+  {
+    key: 6,
+    Image: "Images/image_bw.png",
+    heading: "Convert to B&W",
+    content: "Convert your photo to Black and White image ",
+  },
 ];
 
 export default img_blocks;
