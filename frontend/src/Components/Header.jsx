@@ -19,7 +19,15 @@ const Header = () => {
             <li>
               <NavLink to="/">Edit Image</NavLink>
             </li>
+            <li>
+              <NavLink to="/password_manager">Password manager</NavLink>
+            </li>
           </ul>
+        </div>
+        <div className="burger">
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
       </div>
     </>

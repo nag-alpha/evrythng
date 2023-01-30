@@ -1,28 +1,29 @@
 .header{
     /* border: 2px solid red; */
     width: 100%;
-    height: 5em;
+    height: 10rem;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 800;
     color: rgb(0, 0, 0);
-    font-size: 20px;
+    font-size: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo{
-    margin-left: 3em;
+    margin-left: 6rem;
 }
 ul{
-    margin-right: 4em ;
+    margin: 0;
+    padding: 0;
 }
 li{
     display: inline;
-    margin: 0 20px;
+    margin: 0 2rem;
     text-decoration: none;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 3rem;
 }
 
 a{
@@ -35,7 +36,104 @@ a:visited{
 
 .active{
     text-decoration: underline;
-    text-underline-offset: 10px;
+    text-underline-offset: 1rem;
     text-decoration-color: red;
-    text-decoration-thickness: 4px ;
+    text-decoration-thickness: 0.4rem ;
 }
+
+
+@media only screen and (min-width: 1080px){
+    .header{
+        position: relative;
+        font-size: 2.5rem;
+    }
+
+    ul{
+        position: absolute;
+        right: 0rem;
+        bottom: 3.2rem;
+        font-size: 2rem;
+    }
+}
+
+
+@media only screen and (max-width: 1080px) and (min-width: 768px){
+    .header {
+        position: relative;
+        font-size: 2.5rem;
+    }
+    
+    ul {
+        margin: 0;
+            padding: 0;
+        position: absolute;
+        right: 0rem;
+        bottom: 4rem;
+        font-size: 2rem;
+    }
+    li {
+        display: inline;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 600px) {
+    .header {
+        position: relative;
+    }
+    
+    ul {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        right: 0rem;
+        bottom: 4rem;
+    }
+    
+    .logo{
+        font-size: 2rem;
+        margin-left: 3rem;
+    }
+    .header li{
+        font-size: 1.4rem;
+        margin: 0 1rem;
+    }
+
+    .header{
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .navigation{
+        display: none;
+    }
+
+    .header{
+        width: 60rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .logo{
+        font-size: 3rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    .burger{
+        margin: 0;
+        padding: 0;
+    }
+
+    .burger div{
+        height: 0.4rem;
+        width: 3rem;
+        background-color: black;
+        margin: 0.5rem;
+    }
+}
+

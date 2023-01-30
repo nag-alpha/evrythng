@@ -13,6 +13,7 @@ const App = () => {
       <Routes>
         <Route exact path="/" element={<Image />} />
         <Route exact path="/pdf" element={<PDF />} />
+        <Route exact path="/password_manager" element={<PDF />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
