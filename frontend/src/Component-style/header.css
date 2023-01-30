@@ -40,7 +40,9 @@ a:visited{
     text-decoration-color: red;
     text-decoration-thickness: 0.4rem ;
 }
-
+.burger{
+    display: none;
+}
 
 @media only screen and (min-width: 1080px){
     .header{
@@ -107,7 +109,7 @@ a:visited{
 }
 
 @media only screen and (max-width: 600px){
-    .navigation{
+    .navigation ul{
         display: none;
     }
 
@@ -127,13 +129,27 @@ a:visited{
     .burger{
         margin: 0;
         padding: 0;
+        display: block;
+        z-index: 1;
     }
 
-    .burger div{
-        height: 0.4rem;
-        width: 3rem;
+   #activated ul{
+        padding-top: 15rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 130rem;
+        width: 64rem;
         background-color: black;
-        margin: 0.5rem;
-    }
+        display: flex;
+        flex-direction: column;
+        color: white;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10rem;
+   }
+
 }
+
 
