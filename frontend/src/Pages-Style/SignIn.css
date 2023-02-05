@@ -1,0 +1,34 @@
+.sign_in{
+    width: fit-content;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+.sign_in form{
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 700;
+    gap: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+form input{
+    width: 30rem;
+    height: 2rem;
+}
+
+form button{
+    margin: auto;
+    width: 20rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .sign_in {
+        width: 60rem;
+        text-align: center;
+
+    }
+}

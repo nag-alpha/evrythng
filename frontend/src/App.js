@@ -5,6 +5,8 @@ import Footer from "./Components/Footer";
 import PDF from "./Pages/PDF";
 import Image from "./Pages/Image";
 import Error from "./Pages/Error";
+import SignIn from "./Pages/SignIn";
+import SignUp from "./Pages/SignUp";
 
 const App = () => {
   return (
@@ -13,7 +15,8 @@ const App = () => {
       <Routes>
         <Route exact path="/" element={<Image />} />
         <Route exact path="/pdf" element={<PDF />} />
-        <Route exact path="/password_manager" element={<PDF />} />
+        <Route exact path="/password_manager" element={<SignIn />} />
+        <Route exact path="/sign_up" element={<SignUp />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
