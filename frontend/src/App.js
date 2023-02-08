@@ -7,6 +7,7 @@ import Image from "./Pages/Image";
 import Error from "./Pages/Error";
 import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
+import Vault from "./Pages/Vault";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route exact path="/pdf" element={<PDF />} />
         <Route exact path="/password_manager" element={<SignIn />} />
         <Route exact path="/sign_up" element={<SignUp />} />
+        <Route exact path="/vault" element={<Vault />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />

@@ -1,0 +1,24 @@
+.add_box{
+    margin: 0 auto;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.3rem;
+}
+
+.add_box input{
+    width: 20rem;
+}
+
+@media only screen and (max-width: 600px){
+    .add_box{
+        width: 600px;
+    }
+}
+

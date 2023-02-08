@@ -1,32 +1,51 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 import "../Pages-Style/SignUp.css";
 
 const SignUp = () => {
   const [credentials, setCredentials] = useState({
-    email: "",
+    uname: "",
     password: "",
   });
 
   const handle = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-
-    console.log(value);
-
     setCredentials({ ...credentials, [name]: value });
+  };
+
+  const navigate = useNavigate();
+
+  const sub = async (e) => {
+    try {
+      e.preventDefault();
+      await axios.post("/sign_up", credentials);
+      window.alert("Registration successful. Taking you to login page");
+      navigate("/password_manager");
+    } catch (err) {
+      if (err.response.status === 400) {
+        throw window.alert("Insufficient / Invalid input");
+      } else if (err.response.status === 409) {
+        throw window.alert("Username already present");
+      } else {
+        console.log(err);
+      }
+    }
   };
 
   return (
     <div className="sign_up">
       <form method="POST">
-        <label htmlFor="email">EMAIL : </label>
+        <h1>R E G I S T E R</h1>
+        <label htmlFor="uname">USERNAME : </label>
         <input
           type="text"
-          name="email"
-          value={credentials.email}
+          name="uname"
+          value={credentials.uname}
           onChange={handle}
         />
         <label htmlFor="password">PASSWORD : </label>
@@ -36,7 +55,9 @@ const SignUp = () => {
           value={credentials.password}
           onChange={handle}
         />
-        <button type="submit">SIGN UP</button>
+        <button type="submit" onClick={sub}>
+          SIGN UP
+        </button>
       </form>
       <NavLink to="/password_manager" className="to_signin">
         <h1>Already registered ? Click here to sign in</h1>
