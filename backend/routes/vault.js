@@ -25,6 +25,16 @@ router.post("/vault", authenticate, async (req, res) => {
   }
 });
 
+router.post("/vaultdel", async (req, res) => {
+  try {
+    const { dbid } = req.body;
+    await Credential.deleteOne({ _id: dbid });
+    res.sendStatus(200);
+  } catch (err) {
+    console.log(err);
+  }
+});
+
 router.post("/logout", (req, res) => {
   res.clearCookie("evrythng", { path: "/" }).sendStatus(200);
 });
