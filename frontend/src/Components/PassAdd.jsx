@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "../Component-style/pass_add.css";
 
@@ -33,9 +34,25 @@ function PassAdd() {
       }
     }
   };
+  const navigate = useNavigate();
+
+  const logout = async () => {
+    try {
+      const res = await axios.post("/logout", { withCredentials: true });
+      if (res.status === 200) {
+        window.alert("Logging you out");
+        navigate("/");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <div className="add_box">
+      <h1 className="head">
+        Enter details to add into your vault and press SAVE
+      </h1>
       <form method="POST">
         <label htmlFor="site">SITE NAME: </label>
         <input type="text" name="site" onChange={handle} />
@@ -46,6 +63,9 @@ function PassAdd() {
         <button type="submit" onClick={submit}>
           SAVE
         </button>
+        <h1 className="logout" onClick={logout}>
+          Click here to Logout
+        </h1>
       </form>
     </div>
   );

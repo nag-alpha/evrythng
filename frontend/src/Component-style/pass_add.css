@@ -17,6 +17,26 @@ form{
     width: 20rem;
 }
 
+button{
+    height: 3rem;
+}
+
+.head{
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+.logout{
+    width: fit-content;
+    background-color: black;
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+}
+
 @media only screen and (max-width: 600px){
     .add_box{
         width: 600px;

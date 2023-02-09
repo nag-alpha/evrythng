@@ -25,4 +25,8 @@ router.post("/vault", authenticate, async (req, res) => {
   }
 });
 
+router.post("/logout", (req, res) => {
+  res.clearCookie("evrythng", { path: "/" }).sendStatus(200);
+});
+
 module.exports = router;
