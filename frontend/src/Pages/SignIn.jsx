@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 import "../Pages-Style/SignIn.css";
+import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
   const [credentials, setCredentials] = useState({
@@ -16,11 +17,15 @@ const SignIn = () => {
 
     setCredentials({ ...credentials, [name]: value });
   };
+
+  const navigate = useNavigate();
+
   const sub = async (e) => {
     try {
       e.preventDefault();
       await axios.post("/password_manager", credentials);
       window.alert("Success. Logging you in");
+      navigate("/vault");
     } catch (err) {
       if (err.response.status === 400) {
         throw window.alert("Insufficient details");

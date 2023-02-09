@@ -25,7 +25,7 @@ const Header = () => {
               <NavLink to="/">Edit Image</NavLink>
             </li>
             <li onClick={() => setBurgerActive(!burgerActive)}>
-              <NavLink to="/password_manager">Password manager</NavLink>
+              <NavLink to="/vault">Password manager</NavLink>
             </li>
           </ul>
         </div>

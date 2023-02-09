@@ -10,6 +10,7 @@ form{
     align-items: center;
     justify-content: center;
     gap: 1.3rem;
+    padding: 2rem;
 }
 
 .add_box input{

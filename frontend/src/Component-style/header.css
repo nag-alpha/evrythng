@@ -81,7 +81,7 @@ a:visited{
     }
 }
 
-@media only screen and (max-width: 768px) and (min-width: 600px) {
+@media only screen and (max-width: 800px) and (min-width: 600px) {
     .header {
         position: relative;
     }
@@ -130,7 +130,7 @@ a:visited{
         margin: 0;
         padding: 0;
         display: block;
-        z-index: 1;
+        z-index: 2;
     }
 
    #activated ul{
@@ -148,6 +148,7 @@ a:visited{
         justify-content: flex-start;
         align-items: center;
         gap: 10rem;
+        z-index: 1;
    }
 
 }

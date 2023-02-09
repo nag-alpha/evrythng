@@ -1,9 +1,12 @@
 import React from "react";
+import axios from "axios";
 import { useState } from "react";
 import "../Component-style/pass_add.css";
 
 function PassAdd() {
+  const reload = () => window.location.reload(true);
   const [details, setDetails] = useState({
+    site: "",
     username: "",
     password: "",
   });
@@ -14,13 +17,28 @@ function PassAdd() {
     setDetails({ ...details, [name]: value });
   };
 
-  const submit = (e) => {
+  const submit = async (e) => {
     e.preventDefault();
+    try {
+      await axios.post("/vault", details);
+      window.alert("Successfully added");
+      reload();
+    } catch (err) {
+      if (err.response.status === 400) {
+        throw window.alert("Insufficient details");
+      } else if (err.response.status === 409) {
+        throw window.alert("Invalid credentials");
+      } else {
+        console.log(err);
+      }
+    }
   };
 
   return (
     <div className="add_box">
       <form method="POST">
+        <label htmlFor="site">SITE NAME: </label>
+        <input type="text" name="site" onChange={handle} />
         <label htmlFor="username">USERNAME: </label>
         <input type="text" name="username" onChange={handle} />
         <label htmlFor="password">PASSWORD: </label>

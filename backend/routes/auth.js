@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const jwt = require("jsonwebtoken");
-const authenticate = require("../middleware/authenticate");
 
 require("../db/conn");
 const User = require("../models/userSchema");
@@ -56,8 +55,6 @@ router.post("/password_manager", async (req, res) => {
   }
 });
 
-router.get("/about", authenticate, (req, res) => {
-  console.log("heyyy");
-});
+
 
 module.exports = router;
