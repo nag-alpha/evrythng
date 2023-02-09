@@ -25,7 +25,7 @@ router.post("/sign_up", async (req, res) => {
   }
 });
 
-router.post("/password_manager", async (req, res) => {
+router.post("/sign_in", async (req, res) => {
   try {
     const { uname, password } = req.body;
     if (!uname || !password) {

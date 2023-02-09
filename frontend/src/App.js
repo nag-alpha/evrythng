@@ -16,7 +16,7 @@ const App = () => {
       <Routes>
         <Route exact path="/" element={<Image />} />
         <Route exact path="/pdf" element={<PDF />} />
-        <Route exact path="/password_manager" element={<SignIn />} />
+        <Route exact path="/sign_in" element={<SignIn />} />
         <Route exact path="/sign_up" element={<SignUp />} />
         <Route exact path="/vault" element={<Vault />} />
         <Route path="*" element={<Error />} />

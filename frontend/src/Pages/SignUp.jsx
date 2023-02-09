@@ -25,7 +25,7 @@ const SignUp = () => {
       e.preventDefault();
       await axios.post("/sign_up", credentials);
       window.alert("Registration successful. Taking you to login page");
-      navigate("/password_manager");
+      navigate("/sign_in");
     } catch (err) {
       if (err.response.status === 400) {
         throw window.alert("Insufficient / Invalid input");
@@ -59,7 +59,7 @@ const SignUp = () => {
           SIGN UP
         </button>
       </form>
-      <NavLink to="/password_manager" className="to_signin">
+      <NavLink to="/sign_in" className="to_signin">
         <h1>Already registered ? Click here to sign in</h1>
       </NavLink>
     </div>

@@ -23,7 +23,7 @@ const SignIn = () => {
   const sub = async (e) => {
     try {
       e.preventDefault();
-      await axios.post("/password_manager", credentials);
+      await axios.post("/sign_in", credentials);
       window.alert("Success. Logging you in");
       navigate("/vault");
     } catch (err) {

@@ -14,14 +14,14 @@ const Vault = () => {
       setData(details.data);
     } catch (err) {
       if (err.response.status === 401) {
-        navigate("/password_manager");
+        navigate("/sign_in");
       }
     }
   };
 
   useEffect(() => {
     getDetails();
-  }, []);
+  });
 
   return (
     <div>
